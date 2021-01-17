@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "b395c4b103def22544977301d74607c4",
+    "revision": "f139676e1db795aaf15441fda5913b50",
     "url": "/Visualizr-React/index.html"
   },
   {
-    "revision": "79940a7d712205a4048b",
+    "revision": "8edb8a8211eb0dc1b196",
     "url": "/Visualizr-React/static/css/main.c77e0497.chunk.css"
   },
   {
@@ -16,11 +16,15 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Visualizr-React/static/js/2.d5869717.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "79940a7d712205a4048b",
-    "url": "/Visualizr-React/static/js/main.28c1ad97.chunk.js"
+    "revision": "8edb8a8211eb0dc1b196",
+    "url": "/Visualizr-React/static/js/main.faaa112c.chunk.js"
   },
   {
     "revision": "b39386539fa1b35f080f",
     "url": "/Visualizr-React/static/js/runtime-main.1d7f236d.js"
+  },
+  {
+    "revision": "4697a59422149db2504b4e6da960e8eb",
+    "url": "/Visualizr-React/static/media/v-logo.4697a594.png"
   }
 ]);

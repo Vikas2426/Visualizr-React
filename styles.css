@@ -7,6 +7,10 @@ body {
   position: relative;
 }
 
+.App {
+  padding-bottom: 2.5rem;
+}
+
 button {
   line-height: 0px;
   text-transform: capitalize;
@@ -28,6 +32,9 @@ button {
   text-decoration: none;
   font-size: 2rem;
   margin-left: 1em;
+}
+img {
+  max-height: 4vh;
 }
 
 .options {
@@ -113,10 +120,11 @@ code {
 }
 
 footer {
+  background-color: #30396023;
   text-align: center;
   color: #303960;
   width: 100vw;
-  height: 4%;
+  height: 2.5rem;
   position: absolute;
   bottom: 0;
 }
@@ -131,11 +139,17 @@ footer {
 
 @media (max-width: 577px) {
   .navbar {
-    height: 10vh;
+    height: 12vh;
+    padding-top: 2%;
+    flex-direction: column;
   }
   .algo-btn-div {
     padding-right: 0;
-    justify-content: space-around;
+    justify-content: center;
+    /* overflow-x: scroll; */
+  }
+  .algo-btn-div > button {
+    padding: 3%;
   }
 
   .my-container {
@@ -149,12 +163,6 @@ footer {
   .chart-container {
     width: 95vw;
     margin-bottom: 5%;
-    min-height: 60vh !important;
-  }
-
-  footer {
-    margin-top: -2%;
-    padding-bottom: 0%;
-    margin-bottom: 0;
+    min-height: 40vh !important;
   }
 }
