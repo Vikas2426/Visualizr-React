@@ -10,16 +10,18 @@ function App() {
   const year = new Date().getFullYear();
 
   return (
-    <div className="App">
-      <Navbar />
-      <Input />
-      <AlgoButtons />
-      <div className="my-container">
-        <Chart />
-        <CodeContainer />
+    <>
+      <div className="App">
+        <Navbar />
+        <Input />
+        <AlgoButtons />
+        <div className="my-container">
+          <Chart />
+          <CodeContainer />
+        </div>
       </div>
       <footer>Copyright @ Vikas Choubey, India, {year}</footer>
-    </div>
+    </>
   );
 }
 

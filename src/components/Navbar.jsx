@@ -7,7 +7,7 @@ function Navbar() {
     return (
         <nav className="navbar">
 
-            <a className="navbar-brand" href="/"><img src="./v-logo.png" alt="logo" />Vizualizr</a>
+            <a className="navbar-brand" href="/"><img src={require("./v-logo.png")} alt="logo" />izualizr</a>
             <div className="options">
                 <button className="addNumbersBtn" onClick={() => { dispatch(setProblem("add Numbers")) }}>
                     Add Upto
