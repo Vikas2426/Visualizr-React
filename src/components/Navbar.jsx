@@ -1,12 +1,13 @@
 import React from 'react'
-import { connect, useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { setProblem } from '../Redux/actions'
 
 function Navbar() {
     const dispatch = useDispatch()
     return (
         <nav className="navbar">
-            <a className="navbar-brand" href="/">Vizualizr</a>
+
+            <a className="navbar-brand" href="/"><img src="./v-logo.png" alt="logo" />Vizualizr</a>
             <div className="options">
                 <button className="addNumbersBtn" onClick={() => { dispatch(setProblem("add Numbers")) }}>
                     Add Upto

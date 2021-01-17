@@ -1,7 +1,10 @@
 import React from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+import { setInputValue } from '../Redux/actions.js';
 
 function Input() {
-
+    const inputValue = useSelector(state => state.inputValue);
+    const dispatch = useDispatch();
     const handleSubmit = (event) => {
         event.preventDefault()
     }
@@ -11,7 +14,10 @@ function Input() {
                 <input
                     type="text"
                     className="form-input" id="inlineFormInputName2" autoComplete="off"
-                    autoFocus>
+                    autoFocus
+                    value={inputValue}
+                    onChange={(event) => dispatch(setInputValue(event.target.value))}>
+
                 </input>
                 <button
                     onClick={handleSubmit}
