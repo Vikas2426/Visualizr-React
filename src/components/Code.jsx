@@ -1,10 +1,14 @@
 import React, { useEffect } from "react";
 import "./prism.css";
 import Prism from "prismjs";
+import { useSelector } from 'react-redux';
 
-export default function Code({ selectedAlgo }) {
+
+function Code() {
+    const algorithm = useSelector(state => state.algorithm);
+
     let algo = "";
-    if (selectedAlgo === "Naive") {
+    if (algorithm === "Naive") {
         algo = `function addNumber(inputValue){ 
     var sum = 0;
     for (let i = 0; i <= inputValue; i++){
@@ -13,16 +17,16 @@ export default function Code({ selectedAlgo }) {
 }`
     }
 
-    else if (selectedAlgo === "A.P.") {
+    else if (algorithm === "A.P.") {
         algo = `function addNumber = (inputValue) => {
         let sum = inputValue * (inputValue - 1) / 2 ; 
       };`
     }
-    else if (selectedAlgo === "Optimized A.P.") {
+    else if (algorithm === "Optimized A.P.") {
         algo = `function addNumber = (inputValue) => { 
         let sum = (inputValue / 2) * (inputValue - 1) ;
       };` }
-    else if (selectedAlgo === "Linear Search") {
+    else if (algorithm === "Linear Search") {
         algo = `function linearSearch(arr, key){
         for(let i = 0; i < arr.length; i++){
             if(arr[i] === key){
@@ -31,7 +35,7 @@ export default function Code({ selectedAlgo }) {
         }
         return -1
     }` }
-    else if (selectedAlgo === "Binary Search") {
+    else if (algorithm === "Binary Search") {
         algo = `function binarySearch(sortedArray, key){
         let start = 0;
         let end = sortedArray.length - 1;
@@ -53,7 +57,7 @@ export default function Code({ selectedAlgo }) {
         // key wasn't found
         return -1;
     }` }
-    else if (selectedAlgo === "Bubble Sort") {
+    else if (algorithm === "Bubble Sort") {
         algo = `function bubbleSort(inputArr) {
         let n = inputArr.length;
         
@@ -69,7 +73,7 @@ export default function Code({ selectedAlgo }) {
         }
         return inputArr;
     }` }
-    else if (selectedAlgo === "Quick Sort") {
+    else if (algorithm === "Quick Sort") {
         algo = `function partition(arr, start, end){
         // Taking the last element as the pivot
         const pivotValue = arr[end];
@@ -87,7 +91,7 @@ export default function Code({ selectedAlgo }) {
         [arr[pivotIndex], arr[end]] = [arr[end], arr[pivotIndex]] 
         return pivotIndex;
     };` }
-    else if (selectedAlgo === "Merge Sort") {
+    else if (algorithm === "Merge Sort") {
         algo = `
     function mergeSort(array) {
         const half = array.length / 2
@@ -131,3 +135,5 @@ export default function Code({ selectedAlgo }) {
         </div>
     );
 }
+
+export default Code;

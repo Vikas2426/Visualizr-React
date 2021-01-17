@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './App.css';
 import AlgoButtons from './components/AlgoButtons';
 import Chart from './components/Chart';
@@ -7,19 +7,16 @@ import Input from './components/Input';
 import Navbar from './components/Navbar';
 
 function App() {
-  const [problem, setProblem] = useState();
-  // const [inputValue, setInputValue] = useState([]);
-  const [algorithm, setAlgorithm] = useState("");
   const year = new Date().getFullYear();
 
   return (
     <div className="App">
-      <Navbar setProblem={setProblem} />
+      <Navbar />
       <Input />
-      <AlgoButtons algoType={problem} setAlgorithm={setAlgorithm} />
+      <AlgoButtons />
       <div className="my-container">
         <Chart />
-        <CodeContainer algorithm={algorithm} />
+        <CodeContainer />
       </div>
       <footer>Copyright @ Vikas Choubey, India, {year}</footer>
     </div>

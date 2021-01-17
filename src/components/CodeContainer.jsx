@@ -1,10 +1,10 @@
 import React from 'react'
 import Code from './Code'
 
-function CodeContainer({ algorithm }) {
+function CodeContainer() {
   return (
     <div className="code-container">
-      <Code selectedAlgo={algorithm} />
+      <Code />
     </div>
   )
 }

@@ -1,20 +1,20 @@
 import React from 'react'
+import { connect, useDispatch } from 'react-redux';
+import { setProblem } from '../Redux/actions'
 
-
-function Navbar({ setProblem }) {
-
-
+function Navbar() {
+    const dispatch = useDispatch()
     return (
         <nav className="navbar">
             <a className="navbar-brand" href="/">Vizualizr</a>
             <div className="options">
-                <button className="addNumbersBtn" onClick={() => { setProblem("add Numbers") }}>
+                <button className="addNumbersBtn" onClick={() => { dispatch(setProblem("add Numbers")) }}>
                     Add Upto
         </button>
-                <button className="searchingBtn" onClick={() => { setProblem("searching") }}>
+                <button className="searchingBtn" onClick={() => { dispatch(setProblem("searching")) }}>
                     Searching
         </button>
-                <button className="sortingBtn" onClick={() => { setProblem("sorting") }}>
+                <button className="sortingBtn" onClick={() => { dispatch(setProblem("sorting")) }}>
                     Sorting
         </button>
             </div>
@@ -22,4 +22,4 @@ function Navbar({ setProblem }) {
     )
 }
 
-export default Navbar
+export default Navbar;
