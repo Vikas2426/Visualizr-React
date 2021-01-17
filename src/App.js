@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import AlgoButtons from './components/AlgoButtons';
-import Chart from './components/Chart';
+import ChartDisplay from './components/ChartDisplay';
 import CodeContainer from './components/CodeContainer';
 import Input from './components/Input';
 import Navbar from './components/Navbar';
@@ -16,7 +16,7 @@ function App() {
         <Input />
         <AlgoButtons />
         <div className="my-container">
-          <Chart />
+          <ChartDisplay />
           <CodeContainer />
         </div>
       </div>

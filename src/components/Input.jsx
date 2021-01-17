@@ -4,9 +4,12 @@ import { setInputValue } from '../Redux/actions.js';
 
 function Input() {
     const inputValue = useSelector(state => state.inputValue);
+    const algorithm = useSelector(state => state.algorithm);
     const dispatch = useDispatch();
     const handleSubmit = (event) => {
         event.preventDefault()
+        if (algorithm === "")
+            alert("Please select an algorithm.")
     }
     return (
         <div className="form-container input-Form">

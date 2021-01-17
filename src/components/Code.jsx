@@ -3,9 +3,7 @@ import "./prism.css";
 import Prism from "prismjs";
 import { useSelector } from 'react-redux';
 
-
-function Code() {
-    const algorithm = useSelector(state => state.algorithm);
+const getAlgoToDisplay = (algorithm) => {
 
     let algo = "";
     if (algorithm === "Naive") {
@@ -90,10 +88,23 @@ function Code() {
         // Putting the pivot value in the middle
         [arr[pivotIndex], arr[end]] = [arr[end], arr[pivotIndex]] 
         return pivotIndex;
-    };` }
+    };
+    
+    function quickSortRecursive(arr, start, end) {
+        // Base case or terminating case
+        if (start >= end) {
+            return;
+        }
+        
+        // Returns pivotIndex
+        let index = partition(arr, start, end);
+        
+        // Recursively apply the same logic to the left and right subarrays
+        quickSort(arr, start, index - 1);
+        quickSort(arr, index + 1, end);
+    }` }
     else if (algorithm === "Merge Sort") {
-        algo = `
-    function mergeSort(array) {
+        algo = `function mergeSort(array) {
         const half = array.length / 2
         
         // Base case or terminating case
@@ -123,6 +134,14 @@ function Code() {
     }` }
     else { algo = ""; }
 
+    return algo;
+
+}
+
+
+function Code() {
+    const algorithm = useSelector(state => state.algorithm);
+
     useEffect(() => {
         Prism.highlightAll();
     });
@@ -130,7 +149,7 @@ function Code() {
     return (
         <div id='algoDiv'>
             <pre id="algorithm">
-                <code className="language-javascript" id='code-content'>{algo}</code>
+                <code className="language-javascript" id='code-content'>{getAlgoToDisplay(algorithm)}</code>
             </pre>
         </div>
     );

@@ -1,5 +1,4 @@
 import React from 'react'
-import './AlgoButtons.css';
 import { useDispatch, useSelector } from 'react-redux'
 import { setAlgorithm } from '../Redux/actions'
 
@@ -7,13 +6,15 @@ function AlgoButtons() {
 
     const problem = useSelector(state => state.problem)
     const dispatch = useDispatch();
-
+    const handleClick = (event) => {
+        dispatch(setAlgorithm(event.target.textContent))
+    }
     if (problem === "add Numbers")
         return (
             <div className="algo-btn-div">
-                <button onClick={(event) => dispatch(setAlgorithm(event.target.textContent))}>Naive</button>
-                <button onClick={(event) => dispatch(setAlgorithm(event.target.textContent))}>A.P.</button>
-                <button onClick={(event) => dispatch(setAlgorithm(event.target.textContent))}>Optimized A.P.</button>
+                <button onClick={handleClick}>Naive</button>
+                <button onClick={handleClick}>A.P.</button>
+                <button onClick={handleClick}>Optimized A.P.</button>
             </div>
         )
 
@@ -21,17 +22,17 @@ function AlgoButtons() {
     if (problem === "searching")
         return (
             <div className="algo-btn-div">
-                <button onClick={(event) => dispatch(setAlgorithm(event.target.textContent))}>Linear Search</button>
-                <button onClick={(event) => dispatch(setAlgorithm(event.target.textContent))}>Binary Search</button>
+                <button onClick={handleClick}>Linear Search</button>
+                <button onClick={handleClick}>Binary Search</button>
             </div>
         )
 
     if (problem === "sorting")
         return (
             <div className="algo-btn-div">
-                <button onClick={(event) => dispatch(setAlgorithm(event.target.textContent))}>Bubble Sort</button>
-                <button onClick={(event) => dispatch(setAlgorithm(event.target.textContent))}>Quick Sort</button>
-                <button onClick={(event) => dispatch(setAlgorithm(event.target.textContent))}>Merge Sort</button>
+                <button onClick={handleClick}>Bubble Sort</button>
+                <button onClick={handleClick}>Quick Sort</button>
+                <button onClick={handleClick}>Merge Sort</button>
             </div>
         )
 
