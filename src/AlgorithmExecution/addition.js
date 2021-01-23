@@ -1,5 +1,3 @@
-
-
 const addition = (algorithm, inputValue) => {
     switch (algorithm) {
         case "Naive":
@@ -9,7 +7,7 @@ const addition = (algorithm, inputValue) => {
         case "Optimized A.P.":
             return addNumberOptimizedAP(inputValue);
         default:
-            return [];
+            return alert("returned");
     }
 }
 const addNumber = (inputValue) => {
@@ -23,7 +21,8 @@ const addNumber = (inputValue) => {
 
 const addNumberAP = (inputValue) => {
     let n1 = new Date().getTime();
-    { (inputValue * (inputValue + 1)) / 2 }
+    //eslint-disable-next-line
+    let ans = (inputValue * (inputValue + 1)) / 2
     let n2 = new Date().getTime();
     return (n2 - n1);
 };
@@ -32,7 +31,8 @@ const addNumberAP = (inputValue) => {
 
 const addNumberOptimizedAP = (inputValue) => {
     let n1 = new Date().getTime();
-    {(inputValue / 2) * (inputValue + 1) }
+    //eslint-disable-next-line
+    let ans = (inputValue / 2) * (inputValue + 1)
     let n2 = new Date().getTime();
     return (n2 - n1);
 };
