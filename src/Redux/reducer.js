@@ -1,4 +1,4 @@
-import { CHANGE_PROBLEM, CHANGE_ALGORITHM, CHANGE_INPUT_VALUE, CHANGE_DATA, CHANGE_NUM } from "./constants";
+import { CHANGE_PROBLEM, CHANGE_ALGORITHM, CHANGE_INPUT_VALUE, CHANGE_DATA, CHANGE_NUM, CHANGE_RESULT } from "./constants";
 
 const initialState = {
     problem: "",
@@ -6,7 +6,10 @@ const initialState = {
     algorithm: "",
     data: [["Input", "Time"], [0, 0]],
     num: "",
+    result: ""
 }
+
+let i = 0;
 
 export const reducer = (state = initialState, action = {}) => {
     switch (action.type) {
@@ -19,12 +22,17 @@ export const reducer = (state = initialState, action = {}) => {
         case CHANGE_DATA:
             return {
                 ...state,
-                data: [...state.data, action.payload]
+                data: [...state.data, [i++, action.payload]]
             }
         case CHANGE_NUM:
             return {
                 ...state,
                 num: action.payload
+            }
+        case CHANGE_RESULT:
+            return {
+                ...state,
+                result: action.payload
             }
         default:
             return state;

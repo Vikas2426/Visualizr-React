@@ -1,4 +1,6 @@
 const searching = (algorithm, inputValue, num) => {
+    inputValue = inputValue.map(value => parseInt(value));
+    num = parseInt(num)
     switch (algorithm) {
         case "Linear Search":
             return linearSearch(inputValue, num);
@@ -10,24 +12,23 @@ const searching = (algorithm, inputValue, num) => {
 }
 
 const linearSearch = (arr, key) => {
-    arr = arr.map(value => parseInt(value));
     let n1 = new Date().getTime();
+    for (let i = 0; i < 100000000; i++) { }
     for (let i = 0; i < arr.length; i++) {
         if (arr[i] === key) {
             let n2 = new Date().getTime();
-            console.log(i)
-            return (n2 - n1);
+            return [(n2 - n1), "Found at " + i];
         }
     }
     let n2 = new Date().getTime();
-    return (n2 - n1);
+    return [(n2 - n1), "not present"];
 }
 
 
 const binarySearch = (sortedArray, key) => {
-    sortedArray = sortedArray.map(value => parseInt(value));
     sortedArray.sort();
     let n1 = new Date().getTime();
+    for (let i = 0; i < 100000000; i++) { }
     let start = 0;
     let end = sortedArray.length - 1;
 
@@ -37,7 +38,7 @@ const binarySearch = (sortedArray, key) => {
         if (sortedArray[middle] === key) {
             // found the key
             let n2 = new Date().getTime();
-            return (n2 - n1);
+            return [(n2 - n1), "Found at " + middle];
         } else if (sortedArray[middle] < key) {
             // continue searching to the right
             start = middle + 1;
@@ -48,11 +49,8 @@ const binarySearch = (sortedArray, key) => {
     }
     // key wasn't found
     let n2 = new Date().getTime();
-    return (n2 - n1);
+    return [(n2 - n1), "not present"];
 }
-
-
-
 
 
 export default searching;

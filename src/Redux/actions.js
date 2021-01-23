@@ -1,4 +1,4 @@
-import { CHANGE_INPUT_VALUE, CHANGE_ALGORITHM, CHANGE_PROBLEM, CHANGE_DATA, CHANGE_NUM } from './constants.js'
+import { CHANGE_INPUT_VALUE, CHANGE_ALGORITHM, CHANGE_PROBLEM, CHANGE_DATA, CHANGE_NUM, CHANGE_RESULT } from './constants.js'
 
 export const setProblem = text => ({
     type: CHANGE_PROBLEM,
@@ -15,12 +15,17 @@ export const setInputValue = input => ({
     payload: input
 })
 
-export const setData = (input, time) => ({
+export const setData = (time) => ({
     type: CHANGE_DATA,
-    payload: [input, time]
+    payload: time
 })
 
 export const setNum = input => ({
     type: CHANGE_NUM,
     payload: input
+})
+
+export const setResult = result => ({
+    type: CHANGE_RESULT,
+    payload: result
 })

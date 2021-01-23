@@ -4,6 +4,7 @@ import { useSelector } from 'react-redux';
 
 function ChartDisplay() {
     const data = useSelector(state => state.data);
+    console.log(data)
     return (
         <div className="chart-container">
             < Chart

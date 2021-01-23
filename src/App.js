@@ -5,6 +5,7 @@ import ChartDisplay from './components/ChartDisplay';
 import CodeContainer from './components/CodeContainer';
 import Input from './components/Input';
 import Navbar from './components/Navbar';
+import Result from './components/Result';
 
 function App() {
   const year = new Date().getFullYear();
@@ -14,6 +15,7 @@ function App() {
       <div className="App">
         <Navbar />
         <Input />
+        <Result />
         <AlgoButtons />
         <div className="my-container">
           <ChartDisplay />

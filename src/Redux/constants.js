@@ -3,3 +3,4 @@ export const CHANGE_ALGORITHM = 'CHANGE_ALGORITHM';
 export const CHANGE_INPUT_VALUE = 'CHANGE_INPUT_VALUE';
 export const CHANGE_DATA = 'CHANGE_DATA';
 export const CHANGE_NUM = 'CHANGE_NUM';
+export const CHANGE_RESULT = 'CHANGE_RESULT';

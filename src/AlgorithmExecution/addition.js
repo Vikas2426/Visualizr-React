@@ -12,9 +12,12 @@ const addition = (algorithm, inputValue) => {
 }
 const addNumber = (inputValue) => {
     let n1 = new Date().getTime();
-    for (let i = 0; i <= inputValue; i++) { }
+    let ans = 0;
+    for (let i = 0; i <= inputValue; i++) {
+        ans += i;
+    }
     let n2 = new Date().getTime();
-    return (n2 - n1);
+    return [(n2 - n1), ans];
 };
 
 
@@ -24,7 +27,7 @@ const addNumberAP = (inputValue) => {
     //eslint-disable-next-line
     let ans = (inputValue * (inputValue + 1)) / 2
     let n2 = new Date().getTime();
-    return (n2 - n1);
+    return [(n2 - n1), ans];
 };
 
 
@@ -34,7 +37,7 @@ const addNumberOptimizedAP = (inputValue) => {
     //eslint-disable-next-line
     let ans = (inputValue / 2) * (inputValue + 1)
     let n2 = new Date().getTime();
-    return (n2 - n1);
+    return [(n2 - n1), ans];
 };
 
 

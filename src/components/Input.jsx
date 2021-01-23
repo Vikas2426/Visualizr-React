@@ -1,6 +1,6 @@
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { setInputValue, setData, setNum } from '../Redux/actions.js';
+import { setInputValue, setData, setNum, setResult } from '../Redux/actions.js';
 import addition from '../AlgorithmExecution/addition.js';
 import searching from '../AlgorithmExecution/searching.js';
 import sorting from '../AlgorithmExecution/sorting.js';
@@ -20,8 +20,11 @@ function Input() {
         else {
             if (algoType === "add Numbers") result = addition(algorithm, inputValue);
             else if (algoType === "searching") result = searching(algorithm, inputValue, num);
-            // else if (algoType === "sorting") result = sorting(algorithm, inputValue);
-            dispatch(setData(inputValue, result));
+            else if (algoType === "sorting") result = sorting(algorithm, inputValue);
+
+            const [time, answer] = result;
+            dispatch(setResult(answer));
+            dispatch(setData(time));
         }
 
     }
