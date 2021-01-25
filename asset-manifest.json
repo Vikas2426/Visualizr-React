@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/Visualizr-React/static/css/main.4fddfeb6.chunk.css",
-    "main.js": "/Visualizr-React/static/js/main.cd0b8324.chunk.js",
-    "main.js.map": "/Visualizr-React/static/js/main.cd0b8324.chunk.js.map",
+    "main.js": "/Visualizr-React/static/js/main.15fca338.chunk.js",
+    "main.js.map": "/Visualizr-React/static/js/main.15fca338.chunk.js.map",
     "runtime-main.js": "/Visualizr-React/static/js/runtime-main.1d7f236d.js",
     "runtime-main.js.map": "/Visualizr-React/static/js/runtime-main.1d7f236d.js.map",
     "static/js/2.79464121.chunk.js": "/Visualizr-React/static/js/2.79464121.chunk.js",
     "static/js/2.79464121.chunk.js.map": "/Visualizr-React/static/js/2.79464121.chunk.js.map",
     "index.html": "/Visualizr-React/index.html",
-    "precache-manifest.3b8ed3be993bcd29e8a666fa40d6d55d.js": "/Visualizr-React/precache-manifest.3b8ed3be993bcd29e8a666fa40d6d55d.js",
+    "precache-manifest.bbb453843fa03eaabfd7fdc34a266e4f.js": "/Visualizr-React/precache-manifest.bbb453843fa03eaabfd7fdc34a266e4f.js",
     "service-worker.js": "/Visualizr-React/service-worker.js",
     "static/css/main.4fddfeb6.chunk.css.map": "/Visualizr-React/static/css/main.4fddfeb6.chunk.css.map",
     "static/js/2.79464121.chunk.js.LICENSE.txt": "/Visualizr-React/static/js/2.79464121.chunk.js.LICENSE.txt",
@@ -18,6 +18,6 @@
     "static/js/runtime-main.1d7f236d.js",
     "static/js/2.79464121.chunk.js",
     "static/css/main.4fddfeb6.chunk.css",
-    "static/js/main.cd0b8324.chunk.js"
+    "static/js/main.15fca338.chunk.js"
   ]
 }
